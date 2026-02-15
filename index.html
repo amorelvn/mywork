@@ -7,7 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -52,6 +54,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -104,18 +107,6 @@ footer {
   background: #4A90E2; /* Einheitlich mit Hero */
   border-top: 1px solid #357ABD;
 }
-
-/* ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 </style>
 </head>
 
@@ -127,12 +118,12 @@ footer {
   <a class="btn" href="#kontakt">Kontakt aufnehmen</a>
 </div>
 
-<section class="fade-in">
+<section>
   <h2>Profil</h2>
   <p>Ich entwickle moderne Softwarelösungen für Unternehmen und Privatkunden. Klar, effizient und hochwertig umgesetzt, passend zu jedem Anspruch.</p>
 </section>
 
-<section class="fade-in">
+<section>
   <h2>Expertise</h2>
   <div class="grid">
     <div class="box">Softwareentwicklung</div>
@@ -144,12 +135,12 @@ footer {
   </div>
 </section>
 
-<section class="fade-in">
+<section>
   <h2>Zusammenarbeit</h2>
   <p>Ich arbeite analytisch, zuverlässig und diskret. Langfristige Partnerschaften und spannende Projekte sind willkommen.</p>
 </section>
 
-<section id="kontakt" class="fade-in">
+<section id="kontakt">
   <h2>Kontakt</h2>
   <p>E-Mail: amore.lvn@web.de</p>
 </section>
@@ -157,18 +148,6 @@ footer {
 <footer>
   © 2026
 </footer>
-
-<script>
-const faders = document.querySelectorAll('.fade-in');
-
-window.addEventListener('scroll', () => {
-  faders.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    const screen = window.innerHeight / 1.2;
-    if(top < screen) el.classList.add('show');
-  });
-});
-</script>
 
 </body>
 </html>
