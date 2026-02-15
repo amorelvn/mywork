@@ -4,257 +4,203 @@
 <meta charset="UTF-8">
 <title>Informatikerin M.Sc.</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Inter,sans-serif;
+background:#eaf1ff;
+color:#111;
 }
 
-body {
-  font-family: Inter, sans-serif;
-  background: #E8F0FE;
-  color: #111;
-  line-height: 1.6;
+.hero{
+padding:130px 10%;
+background:linear-gradient(135deg,#3b82f6,#1e40af);
+color:white;
+text-align:center;
+border-radius:0 0 40px 40px;
 }
 
-/* HERO */
-.hero {
-  padding: 120px 10%;
-  background: linear-gradient(135deg, #4A90E2, #357ABD);
-  text-align: center;
-  color: #fff;
-  border-radius: 0 0 30px 30px;
+.hero h1{
+font-family:Playfair Display;
+font-size:60px;
 }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 60px;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:14px 40px;
+border-radius:40px;
+background:white;
+color:#1e40af;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
 }
 
-.hero p {
-  max-width: 650px;
-  margin: 0 auto;
-  font-size: 18px;
+.btn:hover{transform:scale(1.05)}
+
+section{padding:90px 10%}
+
+h2{
+text-align:center;
+font-family:Playfair Display;
+color:#1e40af;
+margin-bottom:50px;
+font-size:36px;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 32px;
-  border: none;
-  background-color: #357ABD;
-  color: #fff;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
+.about-text{
+font-family:'Great Vibes';
+font-size:24px;
+margin-bottom:25px;
+text-align:center;
 }
 
-.btn:hover {
-  background-color: #2A5C8A;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+.grid,.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
 }
 
-/* SECTIONS */
-section {
-  padding: 100px 10%;
+.box,.portfolio-card{
+background:rgba(255,255,255,.7);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:25px;
+text-align:center;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-h2 {
-  font-family: 'Playfair Display', serif;
-  color: #1A3D7C;
-  font-size: 36px;
-  margin-bottom: 40px;
-  text-align: center;
+.box:hover,.portfolio-card:hover{
+transform:translateY(-10px);
 }
 
-/* PROFIL TEXT - Schreibschrift */
-.about-text {
-  font-family: 'Great Vibes', cursive;
-  font-size: 22px;
-  line-height: 1.7;
-  color: #1e293b;
-  margin-bottom: 20px;
+.box img{
+width:50px;
+margin-bottom:15px;
 }
 
-/* EXPERTISE GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 30px;
+.portfolio-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:15px;
 }
 
-.box {
-  background: #D9E6FB;
-  padding: 40px;
-  border-radius: 20px;
-  border: 1px solid #4A90E2;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  text-align: center;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
+.portfolio-info h3{margin-top:15px}
+
+footer{
+background:#1e40af;
+color:white;
+text-align:center;
+padding:40px;
+margin-top:80px;
 }
 
-.box::before {
-  content: "💻"; /* Platzhalter-Icon */
-  font-size: 40px;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.box:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-}
-
-/* PORTFOLIO */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-  padding: 0 10%;
-}
-
-.portfolio-card {
-  display: block;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-}
-
-.portfolio-card img {
-  width: 100%;
-  display: block;
-  height: 180px;
-  object-fit: cover;
-}
-
-.portfolio-info {
-  background: #D9E6FB;
-  padding: 20px;
-  text-align: center;
-}
-
-.portfolio-info h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-  color: #1A3D7C;
-}
-
-.portfolio-info p {
-  font-family: 'Great Vibes', cursive;
-  font-size: 18px;
-  margin: 0;
-  color: #1e293b;
-}
-
-/* FOOTER */
-footer {
-  padding: 50px 10%;
-  text-align: center;
-  color: #fff;
-  background: #4A90E2;
-  border-top: 1px solid #357ABD;
-}
 </style>
 </head>
 
 <body>
 
 <div class="hero">
-  <h1>Informatikerin M.Sc.</h1>
-  <p>Absolventin der Informatik – digitale Lösungen, modern, zuverlässig und kreativ umgesetzt.</p>
-  <a class="btn" href="#kontakt">Kontakt aufnehmen</a>
+<h1>Informatikerin M.Sc.</h1>
+<p>Digitale Lösungen – modern, zuverlässig, kreativ.</p>
+<a class="btn" href="#kontakt">Kontakt aufnehmen</a>
 </div>
 
 <section>
-  <h2>Profil</h2>
-  <p class="about-text">
-    Ich entwickle moderne, leistungsstarke Softwarelösungen. Dabei verbinde ich technisches Know-how mit einem klaren Verständnis für Prozesse, Effizienz und nachhaltige Wertschöpfung. Mein Anspruch ist es, nicht nur funktionierende Systeme zu bauen, sondern durchdachte Lösungen zu schaffen, die echten Mehrwert bieten.
-  </p>
-  <p class="about-text">
-    Von der ersten Idee über die Konzeption bis hin zur Umsetzung und Optimierung begleite ich Projekte strukturiert und zielorientiert. Qualität, saubere Architektur und langfristige Wartbarkeit stehen für mich im Mittelpunkt. Jede Lösung wird individuell entwickelt – angepasst an die Anforderungen, Ziele und Visionen meiner Arbeit.
-  </p>
+<h2>Profil</h2>
+
+<p class="about-text">Ich entwickle leistungsstarke Softwarelösungen mit Struktur und Vision.</p>
+<p class="about-text">Von Idee bis Umsetzung begleite ich Projekte professionell.</p>
+<p class="about-text">Technologie trifft Strategie, Klarheit trifft Kreativität.</p>
+
 </section>
 
 <section>
-  <h2>Expertise</h2>
-  <div class="grid">
-    <div class="box">Softwareentwicklung</div>
-    <div class="box">Web Engineering</div>
-    <div class="box">Systemdesign</div>
-    <div class="box">Datenbanken</div>
-    <div class="box">Technische Beratung</div>
-    <div class="box">Projektbegleitung</div>
-  </div>
+<h2>Expertise</h2>
+
+<div class="grid">
+
+<div class="box">
+<img src="https://cdn-icons-png.flaticon.com/512/2721/2721299.png">
+Softwareentwicklung
+</div>
+
+<div class="box">
+<img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
+Web Engineering
+</div>
+
+<div class="box">
+<img src="https://cdn-icons-png.flaticon.com/512/906/906324.png">
+Systemdesign
+</div>
+
+<div class="box">
+<img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png">
+Datenbanken
+</div>
+
+<div class="box">
+<img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png">
+Beratung
+</div>
+
+<div class="box">
+<img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+Projektbegleitung
+</div>
+
+</div>
 </section>
 
 <section>
-  <h2>Portfolio</h2>
-  <div class="portfolio-grid">
-    <a href="#" class="portfolio-card">
-      <img src="projekt1.jpg" alt="Projekt 1">
-      <div class="portfolio-info">
-        <h3>Projekt 1</h3>
-        <p>Web-App für Kundenmanagement</p>
-      </div>
-    </a>
+<h2>Portfolio</h2>
 
-    <a href="#" class="portfolio-card">
-      <img src="projekt2.jpg" alt="Projekt 2">
-      <div class="portfolio-info">
-        <h3>Projekt 2</h3>
-        <p>Mobile App für Fitness-Tracking</p>
-      </div>
-    </a>
+<div class="portfolio-grid">
 
-    <a href="#" class="portfolio-card">
-      <img src="projekt3.jpg" alt="Projekt 3">
-      <div class="portfolio-info">
-        <h3>Projekt 3</h3>
-        <p>Analyse-Dashboard für Datenvisualisierung</p>
-      </div>
-    </a>
+<div class="portfolio-card">
+<img src="https://picsum.photos/400/300?1">
+<div class="portfolio-info">
+<h3>Web Plattform</h3>
+<p>Kundenverwaltung</p>
+</div>
+</div>
 
-    <a href="#" class="portfolio-card">
-      <img src="projekt4.jpg" alt="Projekt 4">
-      <div class="portfolio-info">
-        <h3>Projekt 4</h3>
-        <p>Automatisierungstool für Prozesse</p>
-      </div>
-    </a>
-  </div>
-</section>
+<div class="portfolio-card">
+<img src="https://picsum.photos/400/300?2">
+<h3>Mobile App</h3>
+<p>Tracking System</p>
+</div>
 
-<section>
-  <h2>Zusammenarbeit</h2>
-  <p class="about-text">Ich arbeite analytisch, zuverlässig und diskret. Langfristige Partnerschaften und spannende Projekte sind willkommen.</p>
+<div class="portfolio-card">
+<img src="https://picsum.photos/400/300?3">
+<h3>Dashboard</h3>
+<p>Datenanalyse</p>
+</div>
+
+<div class="portfolio-card">
+<img src="https://picsum.photos/400/300?4">
+<h3>Automation</h3>
+<p>Business Prozesse</p>
+</div>
+
+</div>
 </section>
 
 <section id="kontakt">
-  <h2>Kontakt</h2>
-  <p class="about-text">E-Mail: amore.lvn@web.de</p>
+<h2>Kontakt</h2>
+<p class="about-text">amore.lvn@web.de</p>
 </section>
 
 <footer>
-  © 2026
+© 2026 Informatikerin M.Sc.
 </footer>
 
 </body>
