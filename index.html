@@ -9,10 +9,11 @@
 <style>
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Inter, sans-serif;
   background: #E8F0FE; /* Helles Blau */
   color: #111;
@@ -26,20 +27,18 @@ body {
   text-align: center;
   color: #fff;
   border-radius: 0 0 30px 30px;
-  position: relative;
-  overflow: hidden;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 60px;
-  margin: 0;
+  margin-bottom: 20px;
   text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
 }
 
 .hero p {
   max-width: 650px;
-  margin: 20px auto 0;
+  margin: 0 auto;
   font-size: 18px;
 }
 
@@ -58,7 +57,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #2A5C8A; /* Dunkleres Blau beim Hover */
+  background-color: #2A5C8A;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
@@ -74,6 +73,16 @@ h2 {
   font-size: 36px;
   margin-bottom: 40px;
   text-align: center;
+}
+
+/* ABOUT / PROFIL TEXT */
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #1e293b;
+  font-weight: 400;
+  margin-bottom: 20px; /* Abstand zwischen Absätzen */
 }
 
 /* EXPERTISE GRID */
@@ -108,21 +117,6 @@ footer {
   border-top: 1px solid #357ABD;
 }
 </style>
-  <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    .about-text {
-      font-family: 'Inter', sans-serif;
-      font-size: 18px;
-      line-height: 1.7;
-      color: #1e293b;
-      font-weight: 400;
-    }
-  </style>
-</head>
-
-
-
 </head>
 
 <body>
@@ -135,37 +129,19 @@ footer {
 
 <section>
   <h2>Profil</h2>
-    <p class="about-text">
-  <p>
-    Ich entwickle moderne, leistungsstarke Softwarelösungen. 
-    Dabei verbinde ich technisches Know-how mit einem klaren Verständnis für Prozesse, Effizienz 
-    und nachhaltige Wertschöpfung. Mein Anspruch ist es, nicht nur funktionierende Systeme zu bauen, 
-    sondern durchdachte Lösungen zu schaffen, die echten Mehrwert bieten.
+  <p class="about-text">
+    Ich entwickle moderne, leistungsstarke digitale Lösungen. Dabei verbinde ich technisches Know-how mit einem klaren Verständnis für Prozesse, Effizienz und nachhaltige Wertschöpfung. Mein Anspruch ist es, nicht nur funktionierende Systeme zu bauen, sondern durchdachte Lösungen zu schaffen, die echten Mehrwert bieten.
   </p>
-
-  <p>
-    Von der ersten Idee über die Konzeption bis hin zur Umsetzung und Optimierung begleite ich 
-    Projekte strukturiert und zielorientiert. Qualität, saubere Architektur und langfristige 
-    Wartbarkeit stehen für mich im Mittelpunkt. Jede Lösung wird individuell entwickelt – 
-    angepasst an die Anforderungen, Ziele und Visionen meiner Arbeit.
+  <p class="about-text">
+    Von der ersten Idee über die Konzeption bis hin zur Umsetzung und Optimierung begleite ich Projekte strukturiert und zielorientiert. Qualität, saubere Architektur und langfristige Wartbarkeit stehen für mich im Mittelpunkt. Jede Lösung wird individuell entwickelt – angepasst an die Anforderungen, Ziele und Visionen meiner Arbeit.
   </p>
-
-  <p>
-    Neben der technischen Entwicklung interessiere ich mich intensiv für Themen wie 
-    Unternehmensführung, internationales Management, strategisches Denken und nachhaltiges Wachstum. 
-    Mich fasziniert die Verbindung zwischen Technologie, Wirtschaft und Individuen – 
-    insbesondere wie klare Strukturen, starke Führung und gute Kommunikation 
-    langfristigen Erfolg ermöglichen.
+  <p class="about-text">
+    Neben der technischen Entwicklung interessiere ich mich intensiv für Themen wie Unternehmensführung, internationales Management, strategisches Denken und nachhaltiges Wachstum. Mich fasziniert die Verbindung zwischen Technologie, Wirtschaft und Individuen – insbesondere wie klare Strukturen, starke Führung und gute Kommunikation langfristigen Erfolg ermöglichen.
   </p>
-
-  <p>
-    Persönliche Weiterentwicklung, Disziplin und der Aufbau wertvoller Beziehungen 
-    spielen für mich ebenfalls eine zentrale Rolle. Ich bin überzeugt davon, dass 
-    langfristiger Erfolg nicht nur auf Fachwissen basiert, sondern ebenso auf 
-    Charakter, Verlässlichkeit und einem starken Netzwerk.
+  <p class="about-text">
+    Persönliche Weiterentwicklung, Disziplin und der Aufbau wertvoller Beziehungen spielen für mich ebenfalls eine zentrale Rolle. Ich bin überzeugt davon, dass langfristiger Erfolg nicht nur auf Fachwissen basiert, sondern ebenso auf Charakter, Verlässlichkeit und einem starken Netzwerk.
   </p>
 </section>
-
 
 <section>
   <h2>Expertise</h2>
@@ -181,12 +157,12 @@ footer {
 
 <section>
   <h2>Zusammenarbeit</h2>
-  <p>Ich arbeite analytisch, zuverlässig und diskret. Langfristige Partnerschaften und spannende Projekte sind willkommen.</p>
+  <p class="about-text">Ich arbeite analytisch, zuverlässig und diskret. Langfristige Partnerschaften und spannende Projekte sind willkommen.</p>
 </section>
 
 <section id="kontakt">
   <h2>Kontakt</h2>
-  <p>E-Mail: amore.lvn@web.de</p>
+  <p class="about-text">E-Mail: amore.lvn@web.de</p>
 </section>
 
 <footer>
