@@ -3,163 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Built on Vision</title>
 
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-font-family:Inter,sans-serif;
-background:#eaf1ff;
-padding-top:70px;
+  font-family:Inter,sans-serif;
+  background:#eaf1ff;
+  padding-top:70px;
+  line-height:1.6;
 }
 
-/* NAV */
-
+/* NAVIGATION */
 nav{
-position:fixed;
-top:0;
-width:100%;
-background:#92b5d6;
-padding:15px 10%;
-display:flex;
-justify-content:flex-end;
-z-index:999;
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#92b5d6;
+  padding:15px 10%;
+  display:flex;
+  justify-content:flex-end;
+  z-index:1000;
 }
 
 nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-font-weight:600;
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#e0f7fa;
 }
 
 /* HERO */
-
 .hero{
-background:#92b5d6;
-color:white;
-text-align:center;
-padding:100px 10%;
-border-radius:0 0 40px 40px;
+  background:#92b5d6;
+  color:white;
+  text-align:center;
+  padding:120px 10%;
+  border-radius:0 0 40px 40px;
 }
 
 .hero h1{
-font-size:52px;
-margin-bottom:20px;
+  font-family:'Playfair Display', serif;
+  font-size:60px;
+  margin-bottom:20px;
 }
 
 .btn{
-background:white;
-color:#92b5d6;
-padding:12px 35px;
-border-radius:30px;
-display:inline-block;
-margin-top:25px;
-text-decoration:none;
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 40px;
+  border-radius:40px;
+  background:white;
+  color:#92b5d6;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
 }
 
 /* SECTIONS */
-
 section{
-padding:80px 10%;
+  padding:90px 10%;
 }
 
 h2{
-text-align:center;
-color:#2b4f6b;
-margin-bottom:40px;
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  color:#2b4f6b;
+  margin-bottom:50px;
+  font-size:36px;
 }
 
-/* GRID */
+.about-text{
+  font-size:20px;
+  margin-bottom:20px;
+  text-align:center;
+}
 
-.grid,
+/* EXPERTISE */
+.grid{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.box{
+  background:white;
+  padding:25px;
+  border-radius:25px;
+  text-align:center;
+  font-weight:600;
+  font-size:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  transition:.4s;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+}
+
+/* PORTFOLIO */
 .portfolio-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
 }
 
-.box,
 .portfolio-card{
-background:white;
-padding:25px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 10px 20px rgba(0,0,0,.12);
-transition:.3s;
+  background:white;
+  padding:20px;
+  border-radius:25px;
+  text-align:center;
+  transition:.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-.box:hover,
 .portfolio-card:hover{
-transform:translateY(-8px);
+  transform:translateY(-10px);
 }
-
-/* PORTFOLIO IMG */
 
 .portfolio-card img{
-width:100%;
-height:170px;
-object-fit:cover;
-border-radius:15px;
-margin-bottom:10px;
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:15px;
+  margin-bottom:10px;
 }
 
-/* CONTACT */
-
+/* KONTAKT FORM */
 .contact-form{
-max-width:500px;
-margin:auto;
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,.12);
+  max-width:500px;
+  margin:0 auto;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-input,textarea{
-width:100%;
-padding:10px;
-margin-top:5px;
-border-radius:10px;
-border:1px solid #92b5d6;
+.contact-form label{
+  display:block;
+  margin-top:15px;
+  font-weight:600;
 }
 
-button{
-background:#92b5d6;
-border:none;
-color:white;
-padding:12px;
-margin-top:20px;
-border-radius:25px;
-width:100%;
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border-radius:10px;
+  border:1px solid #92b5d6;
+  font-size:16px;
+}
+
+.contact-form button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:#92b5d6;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.contact-form button:hover{
+  background:#6faec7;
 }
 
 /* FOOTER */
-
 footer{
-background:#92b5d6;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:60px;
+  background:#92b5d6;
+  color:white;
+  text-align:center;
+  padding:40px;
+  margin-top:80px;
 }
 
 /* MOBILE */
-
 @media(max-width:700px){
-
-nav{
-justify-content:center;
-}
-
-.hero h1{
-font-size:40px;
-}
-
+  nav{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .hero h1{
+    font-size:40px;
+  }
 }
 
 </style>
@@ -167,81 +209,109 @@ font-size:40px;
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
-<a href="#profil">Profil</a>
-<a href="#expertise">Expertise</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#kontakt">Kontakt</a>
+  <a href="#profil">Profil</a>
+  <a href="#expertise">Expertise</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#kontakt">Kontakt</a>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
 <h1>Built on Vision</h1>
 <p>Digitale Lösungen – modern, zuverlässig, kreativ.</p>
 <a class="btn" href="#kontakt">Kontakt aufnehmen</a>
 </div>
 
+<!-- PROFIL -->
 <section id="profil">
 <h2>Profil</h2>
-<p style="text-align:center">Ich entwickle moderne Softwarelösungen mit Struktur & Vision.</p>
+<p class="about-text">Ich entwickle leistungsstarke Softwarelösungen mit Struktur und Vision.</p>
+<p class="about-text">Von Idee bis Umsetzung begleite ich Projekte professionell.</p>
+<p class="about-text">Technologie trifft Strategie, Klarheit trifft Kreativität.</p>
 </section>
 
+<!-- EXPERTISE -->
 <section id="expertise">
 <h2>Expertise</h2>
-
 <div class="grid">
-<div class="box">Software Engineering</div>
-<div class="box">Web Engineering</div>
-<div class="box">Systemdesign</div>
-<div class="box">Datenbanken</div>
-<div class="box">Beratung</div>
-<div class="box">Projektbegleitung</div>
+  <div class="box">Software Engineering</div>
+  <div class="box">Web Engineering</div>
+  <div class="box">Systemdesign</div>
+  <div class="box">Datenbanken</div>
+  <div class="box">Beratung</div>
+  <div class="box">Projektbegleitung</div>
 </div>
-
 </section>
 
+<!-- PORTFOLIO -->
 <section id="portfolio">
 <h2>Portfolio</h2>
-
 <div class="portfolio-grid">
 
 <div class="portfolio-card">
-<img src="https://via.placeholder.com/400">
-<h3>Web Plattform</h3>
+  <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Web Plattform">
+  <h3>Web Plattform</h3>
+  <p>Kundenverwaltung</p>
 </div>
 
 <div class="portfolio-card">
-<img src="https://via.placeholder.com/400">
-<h3>Mobile App</h3>
+  <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mobile App">
+  <h3>Mobile App</h3>
+  <p>Tracking System</p>
 </div>
 
 <div class="portfolio-card">
-<img src="https://via.placeholder.com/400">
-<h3>Dashboard</h3>
+  <img src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Dashboard">
+  <h3>Dashboard</h3>
+  <p>Datenanalyse</p>
 </div>
 
 <div class="portfolio-card">
-<img src="https://via.placeholder.com/400">
-<h3>Automation</h3>
+  <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Automation">
+  <h3>Automation</h3>
+  <p>Business Prozesse</p>
+</div>
+
+<div class="portfolio-card">
+  <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cloud Projekt">
+  <h3>Cloud Projekt</h3>
+  <p>Backend‑Architektur und Cloud‑Lösungen</p>
+</div>
+
+<div class="portfolio-card">
+  <img src="https://images.pexels.com/photos/1181253/pexels-photo-1181253.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Business Website">
+  <h3>Business Website</h3>
+  <p>Corporate Design</p>
 </div>
 
 </div>
-
 </section>
 
+<!-- KONTAKT -->
 <section id="kontakt">
 <h2>Kontakt</h2>
+<p class="about-text">Schicken Sie mir doch gerne eine Nachricht:</p>
 
 <div class="contact-form">
+  <form action="#" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Ihr Name" required>
 
-<input placeholder="Name">
-<input placeholder="E-Mail">
-<textarea placeholder="Nachricht"></textarea>
-<button>Senden</button>
+    <label for="email">E-Mail</label>
+    <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required>
 
+    <label for="message">Nachricht</label>
+    <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+
+    <button type="submit">Senden</button>
+  </form>
 </div>
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026 Built on Vision
 </footer>
