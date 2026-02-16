@@ -2,226 +2,270 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Informatikerin M.Sc.</title>
+<title>Built on Vision</title>
 
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
-font-family:Inter,sans-serif;
-background:#eaf1ff;
-color:#111;
+  font-family:Inter,sans-serif;
+  background:#eaf1ff;
+  color:#111;
+  line-height:1.6;
+  scroll-behavior:smooth;
+  padding-top:70px; /* Platz für fixed nav */
 }
-  
+
+/* NAVIGATION */
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#92b5d6;
+  padding:15px 10%;
+  display:flex;
+  justify-content:flex-end;
+  z-index:1000;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#e0f7fa;
+}
+
+/* HERO */
 .hero{
-padding:130px 10%;
-background:#92b5d6;
-color:white;
-text-align:center;
-border-radius:0 0 40px 40px;
+  padding:120px 10%;
+  background:#92b5d6;
+  color:white;
+  text-align:center;
+  border-radius:0 0 40px 40px;
 }
 
 .hero h1{
-font-family:Playfair Display;
-font-size:60px;
+  font-family:'Playfair Display', serif;
+  font-size:60px;
+  margin-bottom:20px;
 }
 
 .btn{
-margin-top:30px;
-display:inline-block;
-padding:14px 40px;
-border-radius:40px;
-background:white;
-color:#1e40af;
-font-weight:600;
-text-decoration:none;
-transition:.3s;
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 40px;
+  border-radius:40px;
+  background:white;
+  color:#92b5d6;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
 }
 
-.btn:hover{transform:scale(1.05)}
+.btn:hover{
+  transform:scale(1.05);
+}
 
-section{padding:90px 10%}
+/* SECTIONS */
+section{
+  padding:90px 10%;
+}
 
 h2{
-text-align:center;
-font-family:Playfair Display;
-color:#1e40af;
-margin-bottom:50px;
-font-size:36px;
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  color:#2b4f6b;
+  margin-bottom:50px;
+  font-size:36px;
 }
 
 .about-text{
-font-family:'Great Vibes';
-font-size:24px;
-margin-bottom:25px;
-text-align:center;
+  font-family:'Great Vibes', cursive;
+  font-size:24px;
+  margin-bottom:25px;
+  text-align:center;
 }
 
-.grid,.portfolio-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+/* EXPERTISE */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
 }
 
-.box,.portfolio-card{
-background:rgba(255,255,255,.7);
-backdrop-filter:blur(10px);
-padding:40px;
-border-radius:25px;
-text-align:center;
-transition:.4s;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.box:hover,.portfolio-card:hover{
-transform:translateY(-10px);
+.box{
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(10px);
+  padding:30px;
+  border-radius:25px;
+  text-align:center;
+  transition:.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .box img{
-width:50px;
-margin-bottom:15px;
+  width:50px;
+  margin-bottom:15px;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+}
+
+/* PORTFOLIO */
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.portfolio-card{
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(10px);
+  padding:20px;
+  border-radius:25px;
+  text-align:center;
+  transition:.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .portfolio-card img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:15px;
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:15px;
 }
 
-.portfolio-info h3{margin-top:15px}
+.portfolio-card:hover{
+  transform:translateY(-10px);
+}
 
+.portfolio-info h3{
+  margin-top:15px;
+}
+
+/* FOOTER */
 footer{
-background:#92b5d6;
-color:white;
-text-align:center;
-padding:40px;
-margin-top:80px;
+  background:#92b5d6;
+  color:white;
+  text-align:center;
+  padding:40px;
+  margin-top:80px;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<!-- NAVIGATION -->
+<nav>
+  <a href="#profil">Profil</a>
+  <a href="#expertise">Expertise</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
 
+<!-- HERO -->
+<div class="hero">
+<h1>Built on Vision</h1>
 <p>Digitale Lösungen – modern, zuverlässig, kreativ.</p>
 <a class="btn" href="#kontakt">Kontakt aufnehmen</a>
 </div>
 
-<section>
+<!-- PROFIL -->
+<section id="profil">
 <h2>Profil</h2>
-
 <p class="about-text">Ich entwickle leistungsstarke Softwarelösungen mit Struktur und Vision.</p>
 <p class="about-text">Von Idee bis Umsetzung begleite ich Projekte professionell.</p>
 <p class="about-text">Technologie trifft Strategie, Klarheit trifft Kreativität.</p>
-
 </section>
 
-<section>
+<!-- EXPERTISE -->
+<section id="expertise">
 <h2>Expertise</h2>
-
 <div class="grid">
-
-<div class="box">
-<img src="https://cdn-icons-png.flaticon.com/512/2721/2721299.png">
-Software Engineering
-</div>
-
-<div class="box">
-<img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-Web Engineering
-</div>
-
-<div class="box">
-<img src="https://cdn-icons-png.flaticon.com/512/906/906324.png">
-Systemdesign
-</div>
-
-<div class="box">
-<img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png">
-Datenbanken
-</div>
-
-<div class="box">
-<img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png">
-Beratung
-</div>
-
-<div class="box">
-<img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
-Projektbegleitung
-</div>
-
+<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/2721/2721299.png" alt="Software Engineering">Software Engineering</div>
+<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Web Engineering">Web Engineering</div>
+<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="Systemdesign">Systemdesign</div>
+<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Datenbanken">Datenbanken</div>
+<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Beratung">Beratung</div>
+<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Projektbegleitung">Projektbegleitung</div>
 </div>
 </section>
 
-<section>
-  <h2>Portfolio</h2>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+<h2>Portfolio</h2>
+<div class="portfolio-grid">
 
-  <div class="portfolio-grid">
-
-    <div class="portfolio-card">
-      <img src="https://picsum.photos/400/300?1" alt="Projekt 1">
-      <div class="portfolio-info">
-        <h3>Web Plattform</h3>
-        <p>Kundenverwaltung</p>
-      </div>
-    </div>
-
-    <div class="portfolio-card">
-      <img src="https://picsum.photos/400/300?2" alt="Projekt 2">
-      <div class="portfolio-info">
-        <h3>Mobile App</h3>
-        <p>Tracking System</p>
-      </div>
-    </div>
-
-    <div class="portfolio-card">
-      <img src="https://picsum.photos/400/300?3" alt="Projekt 3">
-      <div class="portfolio-info">
-        <h3>Dashboard</h3>
-        <p>Datenanalyse</p>
-      </div>
-    </div>
-
-    <div class="portfolio-card">
-      <img src="https://picsum.photos/400/300?4" alt="Projekt 4">
-      <div class="portfolio-info">
-        <h3>Automation</h3>
-        <p>Business Prozesse</p>
-      </div>
-    </div>
-
-    <div class="portfolio-card">
-      <img src="https://picsum.photos/400/300?5" alt="Projekt 5">
-      <div class="portfolio-info">
-        <h3>Cloud Projekt</h3>
-        <p>Backend-Architektur und Cloud-Lösungen</p>
-      </div>
-    </div>
-
-    <div class="portfolio-card">
-      <img src="https://picsum.photos/400/300?6" alt="Projekt 6">
-      <div class="portfolio-info">
-        <h3>Business Website</h3>
-        <p>Corporate Website mit responsive Design</p>
-      </div>
-    </div>
-
+<div class="portfolio-card">
+  <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Web Plattform">
+  <div class="portfolio-info">
+    <h3>Web Plattform</h3>
+    <p>Kundenverwaltung</p>
   </div>
+</div>
+
+<div class="portfolio-card">
+  <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mobile App">
+  <div class="portfolio-info">
+    <h3>Mobile App</h3>
+    <p>Tracking System</p>
+  </div>
+</div>
+
+<div class="portfolio-card">
+  <img src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Dashboard">
+  <div class="portfolio-info">
+    <h3>Dashboard</h3>
+    <p>Datenanalyse</p>
+  </div>
+</div>
+
+<div class="portfolio-card">
+  <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Automation">
+  <div class="portfolio-info">
+    <h3>Automation</h3>
+    <p>Business Prozesse</p>
+  </div>
+</div>
+
+<div class="portfolio-card">
+  <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cloud Projekt">
+  <div class="portfolio-info">
+    <h3>Cloud Projekt</h3>
+    <p>Backend‑Architektur und Cloud‑Lösungen</p>
+  </div>
+</div>
+
+<div class="portfolio-card">
+  <img src="https://images.pexels.com/photos/1181253/pexels-photo-1181253.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Business Website">
+  <div class="portfolio-info">
+    <h3>Business Website</h3>
+    <p>Corporate Design</p>
+  </div>
+</div>
+
+</div>
 </section>
 
-
+<!-- KONTAKT -->
 <section id="kontakt">
 <h2>Kontakt</h2>
 <p class="about-text">amore.lvn@web.de</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026
 </footer>
