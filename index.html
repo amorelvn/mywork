@@ -96,7 +96,7 @@ h2{
   text-align:center;
 }
 
-/* EXPERTISE */
+/* EXPERTISE TEXT GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -109,13 +109,10 @@ h2{
   padding:30px;
   border-radius:25px;
   text-align:center;
+  font-weight:600;
+  font-size:18px;
   transition:.4s;
   box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.box img{
-  width:50px;
-  margin-bottom:15px;
 }
 
 .box:hover{
@@ -154,6 +151,49 @@ h2{
   margin-top:15px;
 }
 
+/* KONTAKT FORM */
+.contact-form{
+  max-width:500px;
+  margin:0 auto;
+  background:rgba(255,255,255,.7);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.contact-form label{
+  display:block;
+  margin-top:15px;
+  font-weight:600;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border-radius:10px;
+  border:1px solid #92b5d6;
+  font-size:16px;
+}
+
+.contact-form button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:#92b5d6;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.contact-form button:hover{
+  background:#6faec7;
+}
+
 /* FOOTER */
 footer{
   background:#92b5d6;
@@ -185,8 +225,8 @@ footer{
 <!-- PROFIL -->
 <section id="profil">
 <h2>Profil</h2>
-<p class="about-text">Ich entwickle leistungsstarke Softwarelösungen mit Struktur und Vision.</p>
-<p class="about-text">Von Idee bis Umsetzung begleite ich Projekte professionell.</p>
+<p class="about-text">Ich entwickle digitale Lösungen mit Struktur und Vision.</p>
+<p class="about-text">Von Idee bis Umsetzung begleite ich professionell.</p>
 <p class="about-text">Technologie trifft Strategie, Klarheit trifft Kreativität.</p>
 </section>
 
@@ -194,12 +234,12 @@ footer{
 <section id="expertise">
 <h2>Expertise</h2>
 <div class="grid">
-<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/2721/2721299.png" alt="Software Engineering">Software Engineering</div>
-<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Web Engineering">Web Engineering</div>
-<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="Systemdesign">Systemdesign</div>
-<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Datenbanken">Datenbanken</div>
-<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Beratung">Beratung</div>
-<div class="box"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Projektbegleitung">Projektbegleitung</div>
+  <div class="box">Software Engineering</div>
+  <div class="box">Web Engineering</div>
+  <div class="box">Systemdesign</div>
+  <div class="box">Datenbanken</div>
+  <div class="box">Beratung</div>
+  <div class="box">Projektbegleitung</div>
 </div>
 </section>
 
@@ -262,7 +302,23 @@ footer{
 <!-- KONTAKT -->
 <section id="kontakt">
 <h2>Kontakt</h2>
-<p class="about-text">amore.lvn@web.de</p>
+<p class="about-text">Schicken Sie mir doch gerne eine Nachricht:</p>
+
+<div class="contact-form">
+  <form action="#" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+
+    <label for="email">E-Mail</label>
+    <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required>
+
+    <label for="message">Nachricht</label>
+    <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+
+    <button type="submit">Senden</button>
+  </form>
+</div>
+
 </section>
 
 <!-- FOOTER -->
